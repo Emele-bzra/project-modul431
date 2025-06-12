@@ -1,102 +1,136 @@
-/* Grundlegendes Layout */
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: black;
     color: white;
-    font-family: Arial, sans-serif;
-}
-
-/* Header */
-header {
-    background-color: #000000;
-    padding: 10px 0;
-    border-bottom: 5px solid black;
-}
-
-.logo img {
-    height: 60px;
-    margin-left: 20px;
-    vertical-align: middle;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-nav a {
-    text-decoration: none;
-    color: #00ff00;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* Main content */
-main {
-    padding: 50px;
-}
-
-main h1 {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.text {
-    color: #cccccc;
-    max-width: 800px;
-}
-
-/* Footer */
-footer {
-    background-color: #00ff00;
-    padding: 10px 0;
-    text-align: center;
-    color: #00ff00;
-    font-size: 12px;
-    border-top: 5px solid black;
-}
-footer p {
-    color: #00ff00;
-    margin: 0;
-}
-
-/* Grüne Balken oben und unten */
+/* Grüne Linie */
 .green-bar {
     background-color: #00ff00;
     height: 10px;
     width: 100%;
 }
 
-/* Header-Design */
-.black-header {
+/* HEADER */
+.site-header {
     background-color: black;
-    padding: 20px 0;
-    text-align: center;
+    padding: 40px 0; /* Größerer Header */
 }
 
-.logo img {
-    height: 60px;
-    margin-bottom: 10px;
+.header-container {
+    display: flex;
+    justify-content: flex-start;  /* Alle Items links anordnen */
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 12px;
+    flex-wrap: wrap;
 }
 
-nav ul {
-    list-style: none;
+.header-nav {
+    margin-left: auto;  /* Navigation ganz rechts schieben */
+}
+
+
+/* NAVIGATION */
+.header-nav {
+    flex: 1;
     display: flex;
     justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
     padding: 0;
-    margin: 10px 0 0 0;
-    gap: 40px;
+    margin: 0;
 }
 
-nav a {
-    text-decoration: none;
+/* ⬇️ GAP ZWISCHEN NAV-ELEMENTEN DEFINIEREN ⬇️ */
+.nav-gap-50 {
+    gap: 90px;
+}
+.nav-gap-30 { gap: 30px; }
+.nav-gap-70 { gap: 30px; }
+
+.nav-item a {
     color: #00ff00;
+    text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px; /* Größere Schrift */
+    padding: 12px 16px; /* Mehr Padding */
+    transition: background-color 0.3s;
 }
 
+/* Dropdown-Menü */
+.dropdown-parent {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: #111;
+    border: 1px solid #00ff00;
+    border-radius: 4px;
+    min-width: 160px;
+    z-index: 1000;
+}
+
+.dropdown-parent:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: #00ff00;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #003300;
+}
+
+/* MAIN */
+.main-content {
+    flex: 1;
+    padding: 60px 80px;
+    background: linear-gradient(to bottom, #000000, #00cc00);
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.main-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.main-text {
+    color: #cccccc;
+    max-width: 1000px;
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: black;
+    padding: 15px 0;
+    text-align: center;
+    color: #00ff00;
+    font-size: 12px;
+    border-top: 5px solid #00ff00;
+} 
