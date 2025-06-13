@@ -5,7 +5,9 @@
     list-style-type: none;
     text-decoration: none;
 }
-
+p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -223,3 +225,24 @@ body {
                             border-radius: 4px;
                         }
                       
+#Skarabäus{
+    
+    background-color: #050404;
+    color:rgb(18, 101, 234);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 172px;
+    text-decoration: underline;
+    box-shadow: #000 0px 0px 10px;
+    
+}
+#Skarabäus:hover{
+    
+    color:white;
+    text-decoration-color: white;
+}
+.bild_skarabäus{
+    
+    vertical-align: middle;
+}
