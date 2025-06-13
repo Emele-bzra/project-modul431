@@ -25,22 +25,21 @@ body {
 /* HEADER */
 .site-header {
     background-color: black;
-    padding: 40px 0; /* Größerer Header */
+    padding: 40px 0;
 }
 
 .header-container {
     display: flex;
-    justify-content: flex-start;  /* Alle Items links anordnen */
+    justify-content: flex-start;
     align-items: center;
     padding: 0 12px;
     flex-wrap: wrap;
-    margin-left: 90px ;
+    margin-left: 90px;
 }
 
 .header-nav {
-    margin-left: auto;  /* Navigation ganz rechts schieben */
+    margin-left: auto;
 }
-
 
 /* NAVIGATION */
 .header-nav {
@@ -50,27 +49,32 @@ body {
 }
 
 .nav-list {
-    list-style: none;
     display: flex;
     align-items: center;
     padding: 0;
     margin: 0;
 }
 
-/* ⬇️ GAP ZWISCHEN NAV-ELEMENTEN DEFINIEREN ⬇️ */
+/* Abstand zwischen Navigationselementen */
 .nav-gap-50 {
     gap: 60px;
 }
 .nav-gap-30 { gap: 30px; }
 .nav-gap-70 { gap: 30px; }
 
-.nav-item a {
+.nav-item > a {
     color: #00ff00;
     text-decoration: none;
     font-weight: bold;
-    font-size: 22px; /* Größere Schrift */
-    padding: 12px 16px; /* Mehr Padding */
-    transition: background-color 0.3s;
+    font-size: 22px;
+    padding: 12px 16px;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+/* 🟢 Hover-Effekt für Hauptmenüpunkte */
+.nav-item > a:hover {
+    color: #D4EB63;
+    text-decoration: underline;
 }
 
 /* Dropdown-Menü */
@@ -84,18 +88,18 @@ body {
     top: 100%;
     left: 0;
     flex-direction: column;
-    background-color: #111;
-    
     border-radius: 4px;
     min-width: 120px;
     z-index: 1000;
-    
-    
 }
 
 .dropdown-parent:hover .dropdown-menu {
     display: flex;
     margin-top: 10px;
+}
+.dropdown-parent:hover > a {
+    color: #D4EB63;
+    text-decoration: underline;
 }
 
 .dropdown-menu li a {
@@ -103,11 +107,13 @@ body {
     color: #00ff00;
     white-space: nowrap;
     font-size: 16px;
-    
 }
 
+/* 🟡 Hover für Dropdown-Menü-Einträge */
 .dropdown-menu li a:hover {
+    color:  #D4EB63;
     background-color: #7a7b7a;
+    border-radius: 4px;
     
 }
 
@@ -125,10 +131,7 @@ body {
     margin-bottom: 20px;
 }
 
-.main-text {
-    color: #cccccc;
-    max-width: 1000px;
-}
+
 
 /* FOOTER */
 .site-footer {
@@ -138,4 +141,84 @@ body {
     color: #00ff00;
     font-size: 12px;
     border-top: 5px solid #00ff00;
-} 
+}
+
+.bw-accessibility .site-footer {
+    border-top: 5px solid black;
+    color: black;
+}
+
+/* Standard-Header (wenn nicht gescrollt) */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: black;
+    padding: 40px 0;
+    transition: padding 0.3s ease, min-height 0.3s ease;
+}
+
+.site-header .header-logo img {
+    width: 70px;
+    transition: width 0.3s ease;
+}
+
+
+
+/* Dropdown-Menü im Sticky-Header ausblenden */
+.site-header.sticky .dropdown-menu {
+    display: none !important;
+}
+
+/* Dropdown-Menü Textgröße im Standard-Header */
+.site-header .dropdown-menu li a {
+    font-size: 16px;
+}
+
+/* Schriftgröße & Logo im Standardzustand */
+.site-header .nav-item a {
+    font-size: 22px;
+    transition: font-size 0.3s ease;
+}
+
+/* Sticky-Zustand: kleinerer Header, kleineres Logo, kleinere Schrift */
+.site-header.sticky {
+    padding: 10px 0;
+}
+
+.site-header.sticky .header-logo img {
+    width: 80px;
+}
+
+.site-header.sticky .nav-item a {
+    font-size: 16px;
+}
+.text-backgroundbox {
+    background-color: rgba(0, 0, 0, 0.1); /* Schwarz mit 30 % Deckkraft */
+    padding: 20px;
+    border-radius: 3px;
+    
+    color: white; /* Optional, um sicherzustellen, dass Text sichtbar bleibt */
+}
+ .bw-accessibility, .bw-accessibility * {
+                            background: #fff !important;
+                            color: #000 !important;
+                            filter: none !important;
+                            box-shadow: none !important;
+                            text-shadow: none !important;
+                        }
+                        .bw-accessibility img {
+                            filter: grayscale(100%) !important;
+                        }
+                        .bw-accessibility .green-bar {
+                            background: #000 !important;
+                        }
+                        /* Footer green bar schwarz im bw-modus */
+                        .bw-accessibility .site-footer + .green-bar {
+                            background-color: #000 !important;
+                        }
+                        .bw-accessibility .dropdown-menu li a:hover {
+                            color: black !important;
+                            background-color: #d9d6d6 !important;
+                            border-radius: 4px;
+                        }
