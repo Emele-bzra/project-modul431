@@ -15,20 +15,17 @@
     <header class="site-header">
         <div class="header-container">
             <div class="header-logo">
-                <a href="./pages/aboutus/index.html">
-                <img src="./images/Download.png" alt="Slarachare Games Logo" width="120">
+                <a href="../slarachare_games/index.html">
+                    <img src="./images/Download.png" alt="Slarachare Games Logo" >
                 </a>
             </div>
+            <div class=".site-header">
             <nav class="header-nav">
-                <ul class="nav-list nav-gap-50"> <!-- GAP HIER ÄNDERN -->
-                    <li class="nav-item"><a href="#">Home</a></li>
+                <ul class="nav-list nav-gap-50">
+                    <li class="nav-item"><a href="../slarachare_games/index.html">Home</a></li>
                     <li class="nav-item dropdown-parent">
                         <a href="#">Games</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Game 1</a></li>
-                            <li><a href="#">Game 2</a></li>
-                            
-                        </ul>
+                    
                     </li>
                     <li class="nav-item dropdown-parent">
                         <a href="#">News</a>
@@ -47,12 +44,34 @@
                     <li class="nav-item dropdown-parent">
                         <a href="#">Support</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Helpdesk</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="#" id="accessibility-toggle">
+                            <img id="accessibility-icon" src="../slarachare_games/images/Bild.png" alt="accesability_bild" width="35">
+                        </a>
+                    </li>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const toggle = document.getElementById('accessibility-toggle');
+                            const icon = document.getElementById('accessibility-icon');
+                            toggle.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                document.body.classList.toggle('bw-accessibility');
+                                if (document.body.classList.contains('bw-accessibility')) {
+                                    icon.src = "../slarachare_games/images/accesability schwarz.png";
+                                } else {
+                                    icon.src = "../slarachare_games/images/Bild.png";
+                                }
+                            });
+                        });
+                    </script>
+               
                 </ul>
             </nav>
+            </div>
         </div>
     </header>
 
@@ -61,17 +80,54 @@
 
     <!-- Hauptinhalt -->
     <main class="main-content">
-        <h1 class="main-title">Main Header</h1>
+        <h1 class="main-title">Willkommen bei Slarachare Games</h1>
+        <div class="text-backgroundbox">
         <p class="main-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel ligula eget lorem laoreet maximus.
-            Proin eget ex eget ipsum vestibulum consequat.
-        </p>
+          <p>
+    Tauche ein in die fantastische Welt der Zork basierenden Spiele von Slarachare Games!<br> 
+    <strong>Slarachare Games</strong> ist ein junges Game-Studio aus der Schweiz, das als Schulprojekt entstanden ist – gewachsen aus Leidenschaft für Storytelling, Spannung und Interaktivität.
+
+    </p>
+<br>
+  <p>
+    Wir konzentrieren uns auf ein Genre, welches in der heutigen Gamercommunity oft übersehen wird: 
+    <em>Textbasierte Games</em>.<br>
+    Keine aufwendige Grafik, keine hektische Action – stattdessen zählen bei uns Atmosphäre, Entscheidungen und deine Vorstellungskraft.  
+    Denn bei uns entscheiden deine Handlungen, wie deine Geschichte enden wird..
+  </p>
+<br>
+  <p>
+    Unsere Spiele erzählen nicht nur Geschichten – <strong>du bist Teil davon</strong>.<br>
+    Ob mysteriöse Abenteuer, düstere Sci-Fi-Szenarien oder Fantasy Geschichten – jede Entscheidung zählt.  
+    Und jedes Spiel wurde mit viel Liebe zum Detail und einer Prise Humor entwickelt, um dir ein einzigartiges Erlebnis zu bieten.
+  </p>
+<br>
+  <p>
+    Falls dir unsere Games gefallen oder du einen Verbesserungsvorschlag hast,
+    <strong>lass es uns wissen!</strong>  
+    Wir sind immer auf der Suche nach neuen Ideen und Feedback, um unsere Spiele zu verbessern und weiterzuentwickeln.
+  Die Feedback-Funktion ist unter Support zu finden.
+  <br>
+  -Dein Slarachare Games Team
+</p>
+    </p>
+    </div>
     </main>
 
     <!-- Footer -->
     <footer class="site-footer">
-        <p>Starachare Games™ is a trademark of Noel & Florian. All rights reserved.</p>
+        <p>Slarachare Games™ is a trademark of Noel & Florian. All rights reserved.</p>
     </footer>
+<script>
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('.site-header');
+        if (window.scrollY > 10) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    });
+</script>
 
 </body>
-</html> 
+</html>
