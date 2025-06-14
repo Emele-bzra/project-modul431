@@ -224,25 +224,29 @@ body {
                             background-color: #d9d6d6 !important;
                             border-radius: 4px;
                         }
-                      
-#Skarabäus{
-    
-    background-color: #050404;
-    color:rgb(18, 101, 234);
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    width: 172px;
-    text-decoration: underline;
-    box-shadow: #000 0px 0px 10px;
-    
-}
-#Skarabäus:hover{
-    
-    color:white;
-    text-decoration-color: white;
-}
-.bild_skarabäus{
-    
-    vertical-align: middle;
-}
+                    #Skarabäus {
+                        background-color: #050404;
+                        color: rgb(18, 101, 234);
+                        padding: 20px;
+                        border-radius: 5px;
+                        margin-top: 20px;
+                        width: 172px;
+                        text-decoration: underline;
+                        box-shadow: #000 0px 0px 10px;
+                        display: inline-block; /* Nur so groß wie der Link selbst */
+                        cursor: pointer;
+                    }
+                    #Skarabäus:hover {
+                        color: white;
+                        text-decoration-color: white;
+                    }
+                    .bild_skarabäus {
+                        vertical-align: middle;
+                    }
+
+                    /* Download-Link immer ausblenden, Download erfolgt direkt über #Skarabäus */
+                    #download-link {
+                        display: none !important;
+                    }
+                    
+                 
