@@ -251,3 +251,13 @@ body {
                     
                     /* Download-Link im bw-accessibility-Modus */
                  
+.back-button {
+    color: rgb(18, 101, 234);
+    display: inline-block;
+}
+
+.back-button:hover{
+    color: white;
+    text-decoration-color: white;
+    text-decoration: underline;
+}

@@ -30,8 +30,8 @@
                 <ul class="nav-list nav-gap-50">
                     <li class="nav-item"><a href="../slarachare_games/index.html">Home</a></li>
                     <li class="nav-item dropdown-parent">
-                        <a href="games.html">Games</a>
-                    
+                        <a href="games.html"><span style="text-decoration: underline;">Games</span></a>
+
                     </li>
                     <li class="nav-item dropdown-parent">
                         <a href="infos.html">Infos</a></li>
@@ -48,7 +48,7 @@
                             <li><a href="help.html">Help</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown-parent">
+                  <li class="nav-item dropdown-parent">
                         <a href="#" id="accessibility-toggle">
                             <img id="accessibility-icon" src="../slarachare_games/images/Bild.png" alt="accesability_bild" width="35">
                         </a>
@@ -57,13 +57,20 @@
                         document.addEventListener('DOMContentLoaded', function () {
                             const toggle = document.getElementById('accessibility-toggle');
                             const icon = document.getElementById('accessibility-icon');
+                            // Prüfe beim Laden, ob Modus gespeichert ist
+                            if (localStorage.getItem('bw-accessibility') === 'on') {
+                                document.body.classList.add('bw-accessibility');
+                                icon.src = "../slarachare_games/images/accesability schwarz.png";
+                            }
                             toggle.addEventListener('click', function (e) {
                                 e.preventDefault();
                                 document.body.classList.toggle('bw-accessibility');
                                 if (document.body.classList.contains('bw-accessibility')) {
                                     icon.src = "../slarachare_games/images/accesability schwarz.png";
+                                    localStorage.setItem('bw-accessibility', 'on');
                                 } else {
                                     icon.src = "../slarachare_games/images/Bild.png";
+                                    localStorage.setItem('bw-accessibility', 'off');
                                 }
                             });
                         });
@@ -81,14 +88,16 @@
     <!-- Hauptinhalt -->
     <main class="main-content">
         <h1 class="main-title">Playthrough Guide</h1>
+        <a class="back-button" href="../slarachare_games/games.html"><h3>Back</h3></a>
+
         <div class="text-backgroundbox">
         <p class="main-text">
-            <br>
-            <h2>Video Guide</h2>
+    
    <br>
 <h3>Mögliches Ende 1&nbsp;(<span style="color: green;">Erfolgreich</span>)</h3>
   <br>
-  <p>Für dieses Ende ist es essenziell, bei der ersten Entscheidung den <strong>linken Weg</strong> zu wählen.</p>
+  <p>Für dieses Ende ist es essenziell, bei der ersten Entscheidung den <strong>linken Weg</strong> zu wählen.
+Diese Ende ist das optimale Ende des Spiels.</p>
   <br>
  <video controls style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
   <source src="/slarachare_games/videos/Skarabäus_teil1.ps1 - Skarabäus Game Erfolgreicher Weg - Visual Studio Code 2025-06-14 16-01-08.mp4" type="video/mp4">
@@ -97,7 +106,8 @@
 <br>
 <h3>Mögliches Ende 2&nbsp;(<span style="color: red;">Weg rechts</span>)</h3>
 <br>
-<p>Für dieses Ende ist es essenziell, bei der ersten Entscheidung den <strong>rechten Weg</strong> zu wählen.</p>
+<p>Für dieses Ende ist es essenziell, bei der ersten Entscheidung den <strong>rechten Weg</strong> zu wählen.
+Dieses Ende führt zu einem weniger erfreulichen Ausgang.</p>
 <br>
  <video controls style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
   <source src="/slarachare_games/videos/Skarabäus_teil1.ps1 - Skarabäus  Game Rechter weg - Visual Studio Code 2025-06-14 16-13-02.mp4" type="video/mp4">
@@ -106,17 +116,19 @@
 <br>
 <h3>Mögliches Ende 3&nbsp;(<span style="color: red;">Spinnenweg</span>)</h3>
 <br>
-<p>Für dieses Ende ist es essenziell, bei der ersten Entscheidung den <strong>linken Weg</strong> zu wählen und dann gegen Ende des Spiels den <strong>Spinnenweg</strong> zu wählen.</p>
+<p>Für dieses Ende ist es essenziell, bei der ersten Entscheidung den <strong>linken Weg</strong> zu wählen und dann gegen Ende des Spiels den <strong>Spinnenweg</strong> zu wählen.
+Dieses Ende ist das schlechteste Ende des Spieles.</p>
 <br>
  <video controls style="width: 100%; max-width: 800px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
   <source src="/slarachare_games/videos/Skarabäus_teil1.ps1 - Skarabäus Game Full Game Spinnenweg - Visual Studio Code 2025-06-14 15-50-40.mp4" type="video/mp4">
   Dein Browser unterstützt das Video-Tag nicht.
 </video>
 <br>
-<h3>Entscheidungen und deren Konsequenzen</h3>
-<br>
-<p>hi</p>
-    </div>
+
+
+
+
+</div>
 
   </div>
     </p>
