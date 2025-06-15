@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slarachare Games</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    header, h1, h2, h3{
+      font-family: 'Orbitron', sans-serif;
+    }
+</style>
+</head>
+<body>
+
+    <!-- Obere grüne Linie -->
+    <div class="green-bar"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="../slarachare_games/index.html">
+                    <img src="./images/Download.png" alt="Slarachare Games Logo" >
+                </a>
+            </div>
+            <div class=".site-header">
+            <nav class="header-nav">
+                <ul class="nav-list nav-gap-50">
+                    <li class="nav-item"><a href="../slarachare_games/index.html">Home</a></li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="games.html">Games</a>
+                    
+                    </li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="infos.html">Infos</a></li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="about_us.html">About us</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="team.html">Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="support.html"><span style="text-decoration: underline;">Support</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="contact.html">Feedback</a></li>
+                            <li><a href="help.html">Help</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="#" id="accessibility-toggle">
+                            <img id="accessibility-icon" src="../slarachare_games/images/Bild.png" alt="accesability_bild" width="35">
+                        </a>
+                    </li>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const toggle = document.getElementById('accessibility-toggle');
+                            const icon = document.getElementById('accessibility-icon');
+                            // Prüfe beim Laden, ob Modus gespeichert ist
+                            if (localStorage.getItem('bw-accessibility') === 'on') {
+                                document.body.classList.add('bw-accessibility');
+                                icon.src = "../slarachare_games/images/accesability schwarz.png";
+                            }
+                            toggle.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                document.body.classList.toggle('bw-accessibility');
+                                if (document.body.classList.contains('bw-accessibility')) {
+                                    icon.src = "../slarachare_games/images/accesability schwarz.png";
+                                    localStorage.setItem('bw-accessibility', 'on');
+                                } else {
+                                    icon.src = "../slarachare_games/images/Bild.png";
+                                    localStorage.setItem('bw-accessibility', 'off');
+                                }
+                            });
+                        });
+                    </script>
+               
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Untere grüne Linie -->
+    <div class="green-bar"></div>
+
+    <!-- Hauptinhalt -->
+    <main class="main-content">
+        <h1 class="main-title">Slarachare Games Support</h1>
+        <div class="text-backgroundbox">
+        <p class="main-text">
+   
+  <p>
+    Hier findest du Hilfe zu unseren Spielen, kannst Kontakt mit unserem Team aufnehmen oder Antworten auf häufig gestellte Fragen entdecken.
+  </p>
+<br>
+  <h3>Was möchtest du tun?</h3>
+  <br>
+<ul>
+    <li style="display: flex; align-items: center; gap: 8px;">
+        Du brauchst Unterstützung bei einem unserer Spiele
+        <img class="Bild-Fragezeichen" src="/slarachare_games/images/ChatGPT_Image_15._Juni_2025__16_16_40-removebg-preview.png" alt="Fragezeichen" style="vertical-align: middle; height: 24px;">
+    </li>
+    <li style="display: flex; align-items: center; gap: 8px;">
+        Du hast technische Probleme oder Fragen zu deinem Account
+        <img class="Bild-Fragezeichen" src="/slarachare_games/images/ChatGPT_Image_15._Juni_2025__16_16_40-removebg-preview.png" alt="Fragezeichen" style="vertical-align: middle; height: 24px;">
+    </li>
+    <li style="display: flex; align-items: center; gap: 8px;">
+        Du möchtest uns Feedback geben oder einen Bug melden
+        <img class="Bild-Fragezeichen" src="/slarachare_games/images/ChatGPT_Image_15._Juni_2025__16_16_40-removebg-preview.png" alt="Fragezeichen" style="vertical-align: middle; height: 24px;">
+    </li>
+</ul>
+<br>
+  <h3>So erreichst du uns:</h3>
+  <br>
+  <p>
+    Klick <a class="contact-link" href="/slarachare_games/contact.html">hier</a> um  uns ein Feedback zu unseren Games zu geben oder Probleme zu melden.
+  </p>
+  <p>
+    Falls du Hilfe brauchst, klick <a class="contact-link" href="/slarachare_games/help.html">hier</a> um uns wegen Problemen mit den Games oder der Installation zu kontaktieren.
+  </p>
+  <p>
+    <br>
+    <hr>
+    <br>
+    Für aktuelle Informationen und Updates folge uns auf Github.
+  </p>
+
+  <p>
+    Wir bei Slarachare Games sind stets bemüht, dir schnell und unkompliziert weiterzuhelfen, damit du dein Spielerlebnis voll genießen kannst.
+  </p>
+  <br>
+  <p>
+    Vielen Dank, dass du Teil unserer Community bist!
+  </p>
+<img src="/slarachare_games/images/logo_2.png" alt="" width="125">
+  
+</div>
+</p>
+</div>
+</main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>Slarachare Games™ is a trademark of Noel & Florian. All rights reserved.</p>
+    </footer>
+<script>
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('.site-header');
+        if (window.scrollY > 10) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    });
+</script>
+
+</body>
+</html>
