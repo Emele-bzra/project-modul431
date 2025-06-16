@@ -226,7 +226,7 @@ body {
                         }
                     #Skarabäus {
                         background-color: #050404;
-                        color: rgb(18, 101, 234);
+                        color: #00ff00;
                         padding: 20px;
                         border-radius: 5px;
                         margin-top: 20px;
@@ -295,3 +295,113 @@ width: 20px;
     .icon-hover:hover {
         transform: scale(1.15);
     }
+    .gmail-black {
+        margin-top: 10px;
+    }
+    .tiktok-black{
+        margin-top: 10px;
+    }
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    border-left: 4px solid #00aa00;
+    padding-left: 30px;
+}
+.bw-accessibility .timeline {
+    border-left: 4px solid #000 !important;
+}
+
+.timeline-event {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: #00aa00;
+    border: 3px solid white;
+    border-radius: 50%;
+    z-index: 1;
+}
+.bw-accessibility .timeline-marker {
+    background-color: #000 !important;
+}
+
+.timeline-date {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.timeline-content {
+    color: black;
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+
+.team-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 4px;
+box-shadow: black 0px 0px 10px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.team-section h2 {
+  font-size: 2.5em;
+  color: #00aa00;
+  margin-bottom: 40px;
+}
+
+.team-columns {
+  display: flex;
+  justify-content: center; /* horizontal zentriert */
+  align-items: flex-start; /* vertikal oben ausgerichtet */
+  gap: 60px; /* Abstand zwischen den Spalten */
+  flex-wrap: nowrap;
+}
+
+.team-member {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 10px 0 5px;
+}
+
+.team-member .role {
+  font-style: italic;
+  color: #00aa00;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 0.95em;
+  color: #444;
+}

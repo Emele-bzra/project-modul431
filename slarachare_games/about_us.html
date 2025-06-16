@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slarachare Games</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    header, h1, h2, h3{
+      font-family: 'Orbitron', sans-serif;
+    }
+</style>
+</head>
+<body>
+
+    <!-- Obere grüne Linie -->
+    <div class="green-bar"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="../slarachare_games/index.html">
+                    <img src="./images/Download.png" alt="Slarachare Games Logo" >
+                </a>
+            </div>
+            <div class=".site-header">
+            <nav class="header-nav">
+                <ul class="nav-list nav-gap-50">
+                    <li class="nav-item"><a href="../slarachare_games/index.html" aria-label="Home">Home</a></li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="games.html" aria-label="Games">Games</a>
+
+                    </li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="infos.html" aria-label="Infos">Infos</a></li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="about_us.html" aria-label="About us"><span style="text-decoration: underline;">About us</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="team.html" aria-label="Team">Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="support.html" aria-label="Support">Support</a>
+                        <ul class="dropdown-menu">
+                             <li><a href="mailto:contact.slaracharegames@gmail.com" aria-label="Feedback">Feedback</a></li>
+                            <li><a href="help.html" aria-label="Contact">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown-parent">
+                        <a href="#" id="accessibility-toggle">
+                            <img id="accessibility-icon" src="/slarachare_games/images/accessability_white_icon.png" alt="accesability_bild" width="35">
+                        </a>
+                    </li>
+                 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.getElementById('accessibility-toggle');
+        const icon = document.getElementById('accessibility-icon');
+
+        const iconWhite = "../slarachare_games/images/accessability_white_icon.png";
+        const iconBlack = "../slarachare_games/images/accesability schwarz.png";
+
+        // Prüfe beim Laden, ob Modus gespeichert ist
+        if (localStorage.getItem('bw-accessibility') === 'on') {
+            document.body.classList.add('bw-accessibility');
+            icon.src = iconBlack;
+        } else {
+            icon.src = iconWhite;
+        }
+
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.body.classList.toggle('bw-accessibility');
+
+            if (document.body.classList.contains('bw-accessibility')) {
+                icon.src = iconBlack;
+                localStorage.setItem('bw-accessibility', 'on');
+            } else {
+                icon.src = iconWhite;
+                localStorage.setItem('bw-accessibility', 'off');
+            }
+        });
+    });
+</script>
+
+               
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Untere grüne Linie -->
+    <div class="green-bar"></div>
+
+    <!-- Hauptinhalt -->
+    <main class="main-content">
+        <h1 class="main-title" aria-label="Zeitstrahl">Zeitstrahl</h1>
+        <div class="text-backgroundbox">
+        <p class="main-text" aria-label="Willkommen auf unserem Zeitstrahl! Hier möchten wir euch die wichtigsten Meilensteine von Slarachare Games vorstellen. Diese Ereignisse haben unser Studio geprägt und uns auf unserem Weg begleitet. Wir freuen uns, diese Momente mit euch zu teilen und hoffen, dass ihr genauso viel Freude daran habt wie wir!">
+Willkommen auf unserem Zeitstrahl! Hier möchten wir euch die wichtigsten Meilensteine von Slarachare Games vorstellen. Diese Ereignisse haben unser Studio geprägt und uns auf unserem Weg begleitet. Wir freuen uns, diese Momente mit euch zu teilen und hoffen, dass ihr genauso viel Freude daran habt wie wir!
+<div class="timeline">
+  <div class="timeline-event">
+    <div class="timeline-marker"></div>
+    <div class="timeline-date" aria-label="August 2024">August 2024</div>
+    <div class="timeline-content" aria-label="Gemeinsamer Eintritt in die Informatikmittelschule">
+      <h3>Gemeinsamer Eintritt in die Informatikmittelschule</h3>
+      <p>Dies war der Startschuss für die Informatikkarriere der beiden Gründer Noel und Florian, welche in die gleiche Klasse kamen und sich schnell anfreundeten.</p>
+    </div>
+  </div>
+  <div class="timeline-event">
+    <div class="timeline-marker"></div>
+    <div class="timeline-date" aria-label="22. Mai 2025">22. Mai 2025</div>
+    <div class="timeline-content" aria-label="Entwicklung des Spielerlebnisses">
+      <h3>Entwicklung des Spielerlebnisses</h3>
+      <p>Nach dem erfolgreichen Abschluss des ersten Semesters starteten sie ins zweite Halbjahr. Am 22. Mai erhielten sie von ihrem Lehrer den Auftrag, ein Projekt auf Basis von PowerShell zu entwickeln.</p>
+      <p>Für dieses Projekt entschieden sich die beiden, ein textbasiertes Spiel zu programmieren, das von den berühmten Zork-Spielen inspiriert ist.</p>
+    </div>
+  </div>
+  <div class="timeline-event">
+    <div class="timeline-marker"></div>
+    <div class="timeline-date" aria-label="12. Juni 2025">12. Juni 2025</div>
+    <div class="timeline-content" aria-label="Projekt Webseite">
+      <h3>Projekt Webseite</h3>
+    <p>Etwa einen Monat später erhielten sie von einem anderen Lehrer die Aufgabe, eine Webseite zu gestalten und diesen Prozess zu dokumentieren.</p>
+    <p>Da sie stolz auf ihr Spiel waren, entschieden sie sich, eine Webseite darüber zu erstellen, damit andere das Spiel herunterladen und spielen können.
+        Um dies zu ermöglichen, schlossen sie sich zu einem Team zusammen und begannen mit der Entwicklung der Webseite.
+    </p>
+    </div>
+  </div>
+  <div class="timeline-event">
+    <div class="timeline-marker"></div>
+    <div class="timeline-date" aria-label="13. Juni 2025">13. Juni 2025</div>
+    <div class="timeline-content" aria-label="Geburt von Slarachare Games">
+      <h3>Geburt von Slarachare Games</h3>
+      <p>An diesem Tag gründeten Florian und Noel ihr Gamestudio Slarachare Games. Sie erstellten ein Logo und ein Github Profil.
+        Im späteren Verlauf des Tages erstellten sie auch ihren Youtube Kanal, Tiktok account und die email Adresse.
+    </p>
+      </p>
+  </div>
+  </div>
+  <div class="timeline-event">
+    <div class="timeline-marker"></div>
+    <div class="timeline-date" aria-label="19. Juni 2025">19. Juni 2025</div>
+    <div class="timeline-content" aria-label="Veröffentlichung">
+      <h3>Veröffentlichung</h3>
+      <p>Am 19. Juni 2025 veröffentlichten Florian und Noel ihr Webseite und somit ihr erstes Spiel. Dies war ein bedeutender Meilenstein für Slarachare Games und markierte den Beginn ihrer Reise in die Spieleentwicklung.
+        Sie waren stolz darauf, ihr erstes Spiel der Welt zu präsentieren und hoffen, dass es den Spielern genauso viel Freude bereitet wie ihnen bei der Entwicklung. Auch wenn das Spiel nicht mit großen Titeln anderer Studios vergleichbar ist, steckt viel Herzblut und Leidenschaft darin, um eine unterhaltsame Spielerfahrung zu bieten.
+      </p>
+    </div>
+  </div>
+</div>
+ <!--ende-->
+</div>
+</p>
+</div>
+</main>
+
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>Slarachare Games™ is a trademark of Noel & Florian. All rights reserved.</p>
+    </footer>
+<script>
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('.site-header');
+        if (window.scrollY > 10) {
+            header.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+        }
+    });
+</script>
+
+</body>
+</html>

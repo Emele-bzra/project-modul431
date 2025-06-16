@@ -28,24 +28,24 @@
             <div class=".site-header">
             <nav class="header-nav">
                 <ul class="nav-list nav-gap-50">
-                    <li class="nav-item"><a href="../slarachare_games/index.html">Home</a></li>
+                    <li class="nav-item"><a href="../slarachare_games/index.html" aria-label="Home">Home</a></li>
                     <li class="nav-item dropdown-parent">
-                        <a href="games.html">Games</a>
-                    
+                        <a href="games.html" aria-label="Games">Games</a>
+
                     </li>
                     <li class="nav-item dropdown-parent">
-                        <a href="infos.html">Infos</a></li>
+                        <a href="infos.html" aria-label="Infos">Infos</a></li>
                     <li class="nav-item dropdown-parent">
-                        <a href="about_us.html">About us</a>
+                        <a href="about_us.html" aria-label="About us">About us</a>
                         <ul class="dropdown-menu">
-                            <li><a href="team.html">Team</a></li>
+                            <li><a href="team.html" aria-label="Team">Team</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown-parent">
-                        <a href="support.html"><span style="text-decoration: underline;">Support</span></a>
+                        <a href="support.html" aria-label="Support"><span style="text-decoration: underline;">Support</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="mailto:contact.slaracharegames@gmail.com">Feedback</a></li>
-                            <li><a href="help.html">Contact</a></li>
+                            <li><a href="mailto:contact.slaracharegames@gmail.com" aria-label="Feedback">Feedback</a></li>
+                            <li><a href="help.html" aria-label="Contact">Contact</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown-parent">
@@ -101,32 +101,92 @@
    
  <h3>Kontakt</h3>
  <br>
+ 
   <p>
     Wenn du Fragen oder Anliegen hast, zögere nicht, uns zu kontaktieren!
-  </p>
-  <br>
+<br>
+<br>
 <ul style="display: flex; flex-direction: row; gap: 20px; list-style: none; padding: 0; justify-content: flex-start;">
     <li>
-        <a class="link" href="mailto:contact.slaracharegames@gmail.com"></a>
-            <img class="icon-hover" src="/slarachare_games/images/mailicon_white.png" alt="email_logo" width="40">
+        <a class="link" href="mailto:contact.slaracharegames@gmail.com">
+            <img  class="icon-hover" id="gmail-icon" src="/slarachare_games/images/mailicon_white.png" alt="email_logo" width="40">
         </a>
     </li>
     <li>
         <a class="link" href="https://github.com/SkarabaeusGames">
-            <img class="icon-hover" src="/slarachare_games/images/githubicon_white.png" alt="github_icon" width="30">
+            <img class="icon-hover" id="github-icon" src="/slarachare_games/images/githubicon_white.png" alt="github_icon" width="30">
         </a>
     </li>
     <li>
         <a class="link" href="https://www.tiktok.com/@slarachare.games?_t=ZN-8xFKcRHpa7y&_r=1">
-            <img class="icon-hover" src="/slarachare_games/images/tiktokicon_white.png" alt="tiktok_icon" width="30">
+            <img class="icon-hover" id="tiktok-icon" src="/slarachare_games/images/tiktokicon_white.png" alt="tiktok_icon" width="30">
         </a>
     </li>
     <li>
         <a class="link" href="https://www.youtube.com/@slaracharegames">
-            <img class="icon-hover" src="/slarachare_games/images/youtubeicon_white.png" alt="youtube_icon" width="40">
+            <img class="icon-hover" id="youtube-icon" src="/slarachare_games/images/youtubeicon_white.png" alt="youtube_icon" width="40">
         </a>
     </li>
 </ul>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const youtubeIcon = document.getElementById('youtube-icon');
+        const tiktokIcon = document.getElementById('tiktok-icon');
+        const githubIcon = document.getElementById('github-icon');
+        const gmailIcon = document.getElementById('gmail-icon');
+
+        const youtubeWhite = "/slarachare_games/images/youtubeicon_white.png";
+        const youtubeBlack = "/slarachare_games/images/youtube black.png";
+        const tiktokWhite = "/slarachare_games/images/tiktokicon_white.png";
+        const tiktokBlack = "/slarachare_games/images/tiktok black.png";
+        const githubWhite = "/slarachare_games/images/githubicon_white.png";
+        const githubBlack = "/slarachare_games/images/github black.png";
+        const gmailWhite = "/slarachare_games/images/mailicon_white.png";
+        const gmailBlack = "/slarachare_games/images/gmail black.png";
+
+        function setIconSizes(isBW) {
+            if (isBW) {
+                youtubeIcon.width = 50;
+                tiktokIcon.width = 30;
+                githubIcon.width = 50;
+                gmailIcon.width = 60;
+                gmailIcon.classList.add('gmail-black');
+                tiktokIcon.classList.add('tiktok-black');
+            } else {
+                youtubeIcon.width = 40;
+                tiktokIcon.width = 30;
+                githubIcon.width = 30;
+                gmailIcon.width = 40;
+                gmailIcon.classList.remove('gmail-black');
+                tiktokIcon.classList.remove('tiktok-black');
+            }
+        }
+
+        function updateIcons() {
+            if (document.body.classList.contains('bw-accessibility')) {
+                youtubeIcon.src = youtubeBlack;
+                tiktokIcon.src = tiktokBlack;
+                githubIcon.src = githubBlack;
+                gmailIcon.src = gmailBlack;
+                setIconSizes(true);
+            } else {
+                youtubeIcon.src = youtubeWhite;
+                tiktokIcon.src = tiktokWhite;
+                githubIcon.src = githubWhite;
+                gmailIcon.src = gmailWhite;
+                setIconSizes(false);
+            }
+        }
+
+        // Initial check
+        updateIcons();
+
+        // Listen for changes to the bw-accessibility class
+        const observer = new MutationObserver(updateIcons);
+        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    });
+</script>
+
 
   
 </div>
