@@ -30,55 +30,64 @@
                 <ul class="nav-list nav-gap-50">
                     <li class="nav-item"><a href="../slarachare_games/index.html"><span style="text-decoration: underline;">Home</span></a></li>
                     <li class="nav-item dropdown-parent">
-                        <a href="games.html">Games</a>
+                        <a href="/slarachare_games/games.html">Games</a>
                     
                     </li>
                     <li class="nav-item dropdown-parent">
-                        <a href="infos.html">Infos</a>
+                        <a href="/slarachare_games/infos.html">Infos</a>
                     </li>
                     <li class="nav-item dropdown-parent">
-                        <a href="about_us.html">About us</a>
+                        <a href="/slarachare_games/about_us.html">About us</a>
                         <ul class="dropdown-menu">
-                            <li><a href="team.html">Team</a></li>
+                            <li><a href="/slarachare_games/team.html">Team</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown-parent">
-                        <a href="support.html">Support</a>
+                        <a href="/slarachare_games/support.html">Support</a>
                         <ul class="dropdown-menu">
                              <li><a href="mailto:contact.slaracharegames@gmail.com">Feedback</a></li>
-                            <li><a href="help.html">Contact</a></li>
+                            <li><a href="/slarachare_games/help.html">Contact</a></li>
                         </ul>
                     </li>
                    <li class="nav-item dropdown-parent">
                         <a href="#" id="accessibility-toggle">
 
-                            <img id="accessibility-icon" src="/slarachare_games/images/accessability_white_icon.png" alt="accesability_bild" width="35">
+                            <img id="accessibility-icon" src="../slarachare_games/images/accessability_white_icon.png" alt="accesability_bild" width="35">
 
                             
                         </a>
                     </li>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            const toggle = document.getElementById('accessibility-toggle');
-                            const icon = document.getElementById('accessibility-icon');
-                            // Prüfe beim Laden, ob Modus gespeichert ist
-                            if (localStorage.getItem('bw-accessibility') === 'on') {
-                                document.body.classList.add('bw-accessibility');
-                                icon.src = "../slarachare_games/images/accesability schwarz.png";
-                            }
-                            toggle.addEventListener('click', function (e) {
-                                e.preventDefault();
-                                document.body.classList.toggle('bw-accessibility');
-                                if (document.body.classList.contains('bw-accessibility')) {
-                                    icon.src = "../slarachare_games/images/accesability schwarz.png";
-                                    localStorage.setItem('bw-accessibility', 'on');
-                                } else {
-                                    icon.src = "../slarachare_games/images/Bild.png";
-                                    localStorage.setItem('bw-accessibility', 'off');
-                                }
-                            });
-                        });
-                    </script>
+                   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.getElementById('accessibility-toggle');
+        const icon = document.getElementById('accessibility-icon');
+
+        const iconWhite = "../slarachare_games/images/accessability_white_icon.png";
+        const iconBlack = "../slarachare_games/images/accesability schwarz.png";
+
+        // Prüfe beim Laden, ob Modus gespeichert ist
+        if (localStorage.getItem('bw-accessibility') === 'on') {
+            document.body.classList.add('bw-accessibility');
+            icon.src = iconBlack;
+        } else {
+            icon.src = iconWhite;
+        }
+
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.body.classList.toggle('bw-accessibility');
+
+            if (document.body.classList.contains('bw-accessibility')) {
+                icon.src = iconBlack;
+                localStorage.setItem('bw-accessibility', 'on');
+            } else {
+                icon.src = iconWhite;
+                localStorage.setItem('bw-accessibility', 'off');
+            }
+        });
+    });
+</script>
+
                
                 </ul>
             </nav>

@@ -53,29 +53,37 @@
                             <img id="accessibility-icon" src="/slarachare_games/images/accessability_white_icon.png" alt="accesability_bild" width="35">
                         </a>
                     </li>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            const toggle = document.getElementById('accessibility-toggle');
-                            const icon = document.getElementById('accessibility-icon');
-                            // Prüfe beim Laden, ob Modus gespeichert ist
-                            if (localStorage.getItem('bw-accessibility') === 'on') {
-                                document.body.classList.add('bw-accessibility');
-                                icon.src = "../slarachare_games/images/accesability schwarz.png";
-                            }
-                            toggle.addEventListener('click', function (e) {
-                                e.preventDefault();
-                                document.body.classList.toggle('bw-accessibility');
-                                if (document.body.classList.contains('bw-accessibility')) {
-                                    icon.src = "../slarachare_games/images/accesability schwarz.png";
-                                    localStorage.setItem('bw-accessibility', 'on');
-                                } else {
-                                    icon.src = "../slarachare_games/images/Bild.png";
-                                    localStorage.setItem('bw-accessibility', 'off');
-                                }
-                            });
-                        });
-                    </script>
-               
+                  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.getElementById('accessibility-toggle');
+        const icon = document.getElementById('accessibility-icon');
+
+        const iconWhite = "../slarachare_games/images/accessability_white_icon.png";
+        const iconBlack = "../slarachare_games/images/accesability schwarz.png";
+
+        // Prüfe beim Laden, ob Modus gespeichert ist
+        if (localStorage.getItem('bw-accessibility') === 'on') {
+            document.body.classList.add('bw-accessibility');
+            icon.src = iconBlack;
+        } else {
+            icon.src = iconWhite;
+        }
+
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.body.classList.toggle('bw-accessibility');
+
+            if (document.body.classList.contains('bw-accessibility')) {
+                icon.src = iconBlack;
+                localStorage.setItem('bw-accessibility', 'on');
+            } else {
+                icon.src = iconWhite;
+                localStorage.setItem('bw-accessibility', 'off');
+            }
+        });
+    });
+</script>
+
                 </ul>
             </nav>
             </div>
