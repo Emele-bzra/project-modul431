@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skarabäus</title>
+    <title>Slarachare Games</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -30,8 +30,8 @@
                 <ul class="nav-list nav-gap-50">
                     <li class="nav-item"><a href="/index.html">Home</a></li>
                     <li class="nav-item dropdown-parent">
-                        <a href="games.html">Games</a>
-                    
+                        <a href="games.html"><span style="text-decoration: underline;">Games</span></a>
+
                     </li>
                     <li class="nav-item dropdown-parent">
                         <a href="infos.html">Infos</a></li>
@@ -44,11 +44,11 @@
                     <li class="nav-item dropdown-parent">
                         <a href="support.html">Support</a>
                         <ul class="dropdown-menu">
-                            <li><a href="contact.html">Contact</a></li>
+                             <li><a href="contact.html">Feedback</a></li>
                             <li><a href="help.html">Help</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown-parent">
+                   <li class="nav-item dropdown-parent">
                         <a href="#" id="accessibility-toggle">
                             <img id="accessibility-icon" src="/images/accessability_white_icon.png" alt="accesability_bild" width="35">
                         </a>
@@ -57,13 +57,20 @@
                         document.addEventListener('DOMContentLoaded', function () {
                             const toggle = document.getElementById('accessibility-toggle');
                             const icon = document.getElementById('accessibility-icon');
+                            // Prüfe beim Laden, ob Modus gespeichert ist
+                            if (localStorage.getItem('bw-accessibility') === 'on') {
+                                document.body.classList.add('bw-accessibility');
+                                icon.src = "../slarachare_games/images/accesability schwarz.png";
+                            }
                             toggle.addEventListener('click', function (e) {
                                 e.preventDefault();
                                 document.body.classList.toggle('bw-accessibility');
                                 if (document.body.classList.contains('bw-accessibility')) {
                                     icon.src = "../slarachare_games/images/accesability schwarz.png";
+                                    localStorage.setItem('bw-accessibility', 'on');
                                 } else {
                                     icon.src = "../slarachare_games/images/Bild.png";
+                                    localStorage.setItem('bw-accessibility', 'off');
                                 }
                             });
                         });
@@ -90,17 +97,17 @@
    <br>
       <p>
       Tauche ein in die geheimnisvolle Welt des <em>alten Ägypten!</em> In unserem rein textbasierten Terminal-Game <strong>Skarabäus</strong>
-      schlüpfst du in die Rolle eines wagemutigen Abenteurers, der sich auf eine gefährliche Expedition in die legendäre Pyramide
+      schlüpfst du in die Rolle eines  <strong>wagemutigen Abenteurers</strong>, der sich auf eine gefährliche Expedition in die legendäre Pyramide
       von Tutanchamun begibt.
     </p>
     <br>
     <p>
-      Nur mit deinem Verstand und deiner Vorstellungskraft ausgerüstet, erkundest du dunkle Gänge, löst uralte Rätsel und stellst
-      dich den Herausforderungen, die der Pharao hinterlassen hat.
+      Nur mit deinem Verstand und deiner Vorstellungskraft ausgerüstet, erkundest du <em>dunkle Gänge</em>, löst <em>uralte Rätsel</em> und stellst
+      dich <em>den Herausforderungen</em>, die der Pharao hinterlassen hat.
     </p>
 <br>
     <div class="content-block">
-      <h3>Dein Ziel: Der Schatz des Tutanchamun</h3>
+      <h3>Dein Ziel: <strong>Der Schatz des Tutanchamun</strong></h3>
       <br>
       <p>
         Finde den sagenumwobenen Schatz des Tutanchamun! Doch Vorsicht – nicht jeder Schritt ist ungefährlich. Nur wer klug entscheidet,
@@ -114,14 +121,29 @@
       <p>
         <strong>Skarabäus</strong> ist ein klassisches Textadventure im Stil von <em>Zork</em>, das exklusiv im PC-Terminal gespielt wird.
         Keine Grafik, keine Hilfen – nur Worte, dein Verstand und deine Vorstellungskraft. Lass dich von der Sprache leiten und erlebe
-        ein Abenteuer, das allein in deiner Fantasie zum Leben erwacht.
+        ein Abenteuer, das allein in deiner Fantasie zum Leben erwacht. <strong>Die Maximal zu erwartende Spielzeit beträgt etwa 15 Minuten.</strong>
       </p>
       <br>
+      <h3>Steuerung</h3>
+      <br>
+      <p>
+    Das <strong>Terminal-Game</strong> kann jederzeit <em>durch Drücken der Taste <kbd>q</kbd></em> gestoppt und beendet werden.
+    Alle Rätsel und Eingaben erfolgen ausschließlich über die Tastatur.
+    Bei Entscheidungsfragen muss das <strong>exakte Wort</strong>, wie es angezeigt wird, eingegeben werden – zum Beispiel
+    <em>Ja</em> oder <em>Nein</em>. Nur die korrekte Schreibweise wird akzeptiert.
+  </p>
+
+  <p>
+    Es wird <strong>dringend empfohlen</strong>, die vorgesehenen Game-Ordner anzulegen.
+    Im Verlauf des Spiels werden dort wichtige Dokumente abgelegt, die gelesen werden müssen, um weiterspielen zu können.
+  </p>
 <a href="https://github.com/SkarabaeusGames/Skarabaeus-Game/raw/main/Skarab%C3%A4us-Game.zip" download>
   <h3 id="Skarabäus">Download</h3>
 </a>
-
-
+<br>
+<p>Ein Download Guide kann unter Infos gefunden werden</p>
+<br>
+<p>Klicke <a href="/slarachare_games/full_game_skarabaeus.html">hier</a> für Full Game Playthrough Guide</p>
     </div>
 
   </div>
