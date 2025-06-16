@@ -289,3 +289,9 @@ width: 20px;
     text-decoration-color: white;
     text-decoration: underline;
 }
+.icon-hover {
+        transition: transform 0.2s;
+    }
+    .icon-hover:hover {
+        transform: scale(1.15);
+    }
