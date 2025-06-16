@@ -276,6 +276,15 @@ width: 20px;
     margin: 8px 0;
     font-weight: bold;
 }
+.team-link{
+    color: #048f04;
+    font-weight: bold;
+}
+.team-link:hover{
+    color: rgb(14, 101, 224);
+    text-decoration-color: white;
+    text-decoration: underline;
+}
 .contact-link:hover{
     color: white;
     text-decoration-color: white;
@@ -297,9 +306,11 @@ width: 20px;
     }
     .gmail-black {
         margin-top: 10px;
+      
     }
     .tiktok-black{
         margin-top: 10px;
+    
     }
 .timeline {
     position: relative;
@@ -341,8 +352,8 @@ width: 20px;
 }
 
 .timeline-content {
-    color: black;
-    background-color: #f0f0f0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 15px 20px;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
@@ -352,7 +363,7 @@ width: 20px;
 .team-section {
   padding: 60px 20px;
   text-align: center;
-  background-color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 box-shadow: black 0px 0px 10px;
   font-family: 'Orbitron', sans-serif;
@@ -360,7 +371,7 @@ box-shadow: black 0px 0px 10px;
 
 .team-section h2 {
   font-size: 2.5em;
-  color: #00aa00;
+  color: #00ff00;
   margin-bottom: 40px;
 }
 
@@ -373,7 +384,7 @@ box-shadow: black 0px 0px 10px;
 }
 
 .team-member {
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 12px;
   width: 300px;
@@ -391,7 +402,7 @@ box-shadow: black 0px 0px 10px;
 
 .team-member h3 {
   font-size: 1.5em;
-  color: #333;
+  color: #00ff00;
   margin: 10px 0 5px;
 }
 
@@ -403,5 +414,5 @@ box-shadow: black 0px 0px 10px;
 
 .team-member p {
   font-size: 0.95em;
-  color: #444;
+  color: white;
 }
