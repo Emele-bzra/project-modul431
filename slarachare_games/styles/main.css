@@ -276,6 +276,24 @@ width: 20px;
     margin: 8px 0;
     font-weight: bold;
 }
+.games-link{
+    display: inline-block;
+    background: #222;
+    color: #00ff00;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 1px solid black;
+    margin: 8px 0;
+    font-weight: bold;
+    margin-left: 30px;  
+}
+.games-link:hover{
+    color: white;
+    text-decoration-color: white;
+    text-decoration: underline;
+    background-color: green;
+}
 .team-link{
     color: #048f04;
     font-weight: bold;
