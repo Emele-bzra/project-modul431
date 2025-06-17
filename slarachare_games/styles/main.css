@@ -5,6 +5,9 @@
     list-style-type: none;
     text-decoration: none;
 }
+ header, h1, h2, h3{
+      font-family: 'Orbitron', sans-serif;
+    }
 p{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
