@@ -12,24 +12,23 @@
 
     <div class="green-bar"></div>
 
-   
     <header class="site-header">
-        <div class="header-container">
-            <div class="header-logo">
-                <a href="../slarachare_games/index.html">
+        <div class="header-container" aria-label="Hauptkopfzeile">
+            <div class="header-logo" aria-label="Logo">
+                <a href="index.html">
                     <img src="./images/Download.png" alt="Slarachare Games Logo" >
                 </a>
             </div>
             <div class=".site-header">
             <nav class="header-nav">
                 <ul class="nav-list nav-gap-50">
-                    <li class="nav-item"><a href="../slarachare_games/index.html" aria-label="Home">Home</a></li>
+                    <li class="nav-item"><a href="index.html" aria-label="Home">Home</a></li>
                     <li class="nav-item dropdown-parent">
-                        <a href="games.html" aria-label="Games">Games</a>
+                        <a href="games.html" aria-label="Games"><span style="text-decoration: underline;">Games</span></a>
 
                     </li>
                     <li class="nav-item dropdown-parent">
-                        <a href="infos.html" aria-label="Infos"><span style="text-decoration: underline;">Infos</span></a></li>
+                        <a href="infos.html" aria-label="Infos">Infos</a></li>
                     <li class="nav-item dropdown-parent">
                         <a href="about_us.html" aria-label="About us">About us</a>
                         <ul class="dropdown-menu">
@@ -37,15 +36,18 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown-parent">
-                        <a href="support.html" aria-label="Support"><span style="text-decoration: underline;">Support</span></a>
+                        <a href="support.html" aria-label="Support">Support</a>
                         <ul class="dropdown-menu">
-                            <li><a href="mailto:contact.slaracharegames@gmail.com" aria-label="Feedback">Feedback</a></li>
+                             <li><a href="mailto:contact.slaracharegames@gmail.com" aria-label="Feedback">Feedback</a></li>
                             <li><a href="help.html" aria-label="Contact">Contact</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown-parent">
+                   <li class="nav-item dropdown-parent">
                         <a href="#" id="accessibility-toggle">
-                            <img id="accessibility-icon" src="/slarachare_games/images/accessability_white_icon.png" alt="accesability_bild" width="35">
+
+                            <img id="accessibility-icon" src="./images/accessability_white_icon.png" alt="accesability_bild" width="35">
+
+                            
                         </a>
                     </li>
                     <script>
@@ -53,8 +55,8 @@
         const toggle = document.getElementById('accessibility-toggle');
         const icon = document.getElementById('accessibility-icon');
 
-        const iconWhite = "../slarachare_games/images/accessability_white_icon.png";
-        const iconBlack = "../slarachare_games/images/accesability schwarz.png";
+        const iconWhite = "./images/accessability_white_icon.png";
+        const iconBlack = "./images/accesability schwarz.png";
 
      
         if (localStorage.getItem('bw-accessibility') === 'on') {
@@ -103,15 +105,15 @@
 <ul>
     <li style="display: flex; align-items: center; gap: 8px;">
         Du brauchst Unterstützung bei einem unserer Spiele
-        <img class="Bild-Fragezeichen" src="/slarachare_games/images/ChatGPT_Image_15._Juni_2025__16_16_40-removebg-preview.png" alt="Fragezeichen" style="vertical-align: middle; height: 24px;">
+        <img class="Bild-Fragezeichen" src="./images/ChatGPT_Image_15._Juni_2025__16_16_40-removebg-preview.png" alt="Fragezeichen" style="vertical-align: middle; height: 24px;">
     </li>
     <li style="display: flex; align-items: center; gap: 8px;">
         Du hast technische Probleme 
-        <img class="Bild-Fragezeichen" src="/slarachare_games/images/ChatGPT_Image_15._Juni_2025__16_16_40-removebg-preview.png" alt="Fragezeichen" style="vertical-align: middle; height: 24px;">
+        <img class="Bild-Fragezeichen" src="./images/ChatGPT_Image_15._Juni_2025__16_16_40-removebg-preview.png" alt="Fragezeichen" style="vertical-align: middle; height: 24px;">
     </li>
     <li style="display: flex; align-items: center; gap: 8px;">
         Du möchtest uns Feedback geben oder einen Bug melden
-        <img class="Bild-Fragezeichen" src="/slarachare_games/images/ChatGPT_Image_15._Juni_2025__16_16_40-removebg-preview.png" alt="Fragezeichen" style="vertical-align: middle; height: 24px;">
+        <img class="Bild-Fragezeichen" src="./images/ChatGPT_Image_15._Juni_2025__16_16_40-removebg-preview.png" alt="Fragezeichen" style="vertical-align: middle; height: 24px;">
     </li>
 </ul>
 <br>
@@ -121,7 +123,7 @@
     <a class="contact-link" href="mailto:contact.slaracharegames@gmail.com">Schreiben Sie uns ein Feedback</a>    zu unseren Games oder teilen Sie uns Ihre Erfahrungen mit.
   </p>
   <p>
-   <a class="contact-link" href="/slarachare_games/help.html">Melden Sie Probleme/Bugs</a>   damit wir diese schnellstmöglich beheben können.
+   <a class="contact-link" href="help.html">Melden Sie Probleme/Bugs</a>   damit wir diese schnellstmöglich beheben können.
   </p>
     <br>
     
@@ -137,7 +139,7 @@
   <p>
     Vielen Dank, dass du Teil unserer Community bist!
   </p>
-<img src="/slarachare_games/images/logo_2.png" alt="" width="125">
+<img src="./images/logo_2.png" alt="" width="125">
   
 </div>
 </p>

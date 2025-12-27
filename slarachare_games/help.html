@@ -15,18 +15,18 @@
 
    
     <header class="site-header">
-        <div class="header-container">
-            <div class="header-logo">
-                <a href="../slarachare_games/index.html">
+        <div class="header-container" aria-label="Hauptkopfzeile">
+            <div class="header-logo" aria-label="Logo">
+                <a href="index.html">
                     <img src="./images/Download.png" alt="Slarachare Games Logo" >
                 </a>
             </div>
             <div class=".site-header">
             <nav class="header-nav">
                 <ul class="nav-list nav-gap-50">
-                    <li class="nav-item"><a href="../slarachare_games/index.html" aria-label="Home">Home</a></li>
+                    <li class="nav-item"><a href="index.html" aria-label="Home">Home</a></li>
                     <li class="nav-item dropdown-parent">
-                        <a href="games.html" aria-label="Games">Games</a>
+                        <a href="games.html" aria-label="Games"><span style="text-decoration: underline;">Games</span></a>
 
                     </li>
                     <li class="nav-item dropdown-parent">
@@ -38,15 +38,18 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown-parent">
-                        <a href="support.html" aria-label="Support"><span style="text-decoration: underline;">Support</span></a>
+                        <a href="support.html" aria-label="Support">Support</a>
                         <ul class="dropdown-menu">
-                            <li><a href="mailto:contact.slaracharegames@gmail.com" aria-label="Feedback">Feedback</a></li>
+                             <li><a href="mailto:contact.slaracharegames@gmail.com" aria-label="Feedback">Feedback</a></li>
                             <li><a href="help.html" aria-label="Contact">Contact</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown-parent">
+                   <li class="nav-item dropdown-parent">
                         <a href="#" id="accessibility-toggle">
-                            <img id="accessibility-icon" src="/slarachare_games/images/accessability_white_icon.png" alt="accesability_bild" width="35">
+
+                            <img id="accessibility-icon" src="./images/accessability_white_icon.png" alt="accesability_bild" width="35">
+
+                            
                         </a>
                     </li>
                   <script>
@@ -54,8 +57,8 @@
         const toggle = document.getElementById('accessibility-toggle');
         const icon = document.getElementById('accessibility-icon');
 
-        const iconWhite = "../slarachare_games/images/accessability_white_icon.png";
-        const iconBlack = "../slarachare_games/images/accesability schwarz.png";
+        const iconWhite = "./images/accessability_white_icon.png";
+        const iconBlack = "./images/accesability schwarz.png";
 
       
         if (localStorage.getItem('bw-accessibility') === 'on') {
@@ -104,22 +107,22 @@
 <ul id="contact-icons-list" style="display: flex; flex-direction: row; gap: 20px; list-style: none; padding: 0; justify-content: flex-start;">
     <li>
         <a class="link" href="mailto:contact.slaracharegames@gmail.com">
-            <img  class="icon-hover" id="gmail-icon" src="/slarachare_games/images/mailicon_white.png" alt="email_logo" width="40">
+            <img  class="icon-hover" id="gmail-icon" src="./images/mailicon_white.png" alt="email_logo" width="40">
         </a>
     </li>
     <li>
         <a class="link" href="https://github.com/SkarabaeusGames">
-            <img class="icon-hover" id="github-icon" src="/slarachare_games/images/githubicon_white.png" alt="github_icon" width="30">
+            <img class="icon-hover" id="github-icon" src="./images/githubicon_white.png" alt="github_icon" width="30">
         </a>
     </li>
     <li>
         <a class="link" href="https://www.tiktok.com/@slarachare.games?_t=ZN-8xFKcRHpa7y&_r=1">
-            <img class="icon-hover" id="tiktok-icon" src="/slarachare_games/images/tiktokicon_white.png" alt="tiktok_icon" width="30">
+            <img class="icon-hover" id="tiktok-icon" src="./images/tiktokicon_white.png" alt="tiktok_icon" width="30">
         </a>
     </li>
     <li>
         <a class="link" href="https://www.youtube.com/@slaracharegames">
-            <img class="icon-hover" id="youtube-icon" src="/slarachare_games/images/youtubeicon_white.png" alt="youtube_icon" width="40">
+            <img class="icon-hover" id="youtube-icon" src="./images/youtubeicon_white.png" alt="youtube_icon" width="40">
         </a>
     </li>
 </ul>
@@ -130,14 +133,14 @@
         const githubIcon = document.getElementById('github-icon');
         const gmailIcon = document.getElementById('gmail-icon');
 
-        const youtubeWhite = "/slarachare_games/images/youtubeicon_white.png";
-        const youtubeBlack = "/slarachare_games/images/youtube black.png";
-        const tiktokWhite = "/slarachare_games/images/tiktokicon_white.png";
-        const tiktokBlack = "/slarachare_games/images/tiktok black.png";
-        const githubWhite = "/slarachare_games/images/githubicon_white.png";
-        const githubBlack = "/slarachare_games/images/github black.png";
-        const gmailWhite = "/slarachare_games/images/mailicon_white.png";
-        const gmailBlack = "/slarachare_games/images/gmail black.png";
+        const youtubeWhite = "./images/youtubeicon_white.png";
+        const youtubeBlack = "./images/youtube black.png";
+        const tiktokWhite = "./images/tiktokicon_white.png";
+        const tiktokBlack = "./images/tiktok black.png";
+        const githubWhite = "./images/githubicon_white.png";
+        const githubBlack = "./images/github black.png";
+        const gmailWhite = "./images/mailicon_white.png";
+        const gmailBlack = "./images/gmail black.png";
 
         function setIconSizes(isBW) {
             if (isBW) {

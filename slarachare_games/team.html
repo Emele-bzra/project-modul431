@@ -14,25 +14,25 @@
     <div class="green-bar"></div>
 
    
-    <header class="site-header">
-        <div class="header-container">
-            <div class="header-logo">
-                <a href="../slarachare_games/index.html">
+   <header class="site-header">
+        <div class="header-container" aria-label="Hauptkopfzeile">
+            <div class="header-logo" aria-label="Logo">
+                <a href="index.html">
                     <img src="./images/Download.png" alt="Slarachare Games Logo" >
                 </a>
             </div>
             <div class=".site-header">
             <nav class="header-nav">
                 <ul class="nav-list nav-gap-50">
-                    <li class="nav-item"><a href="../slarachare_games/index.html" aria-label="Home">Home</a></li>
+                    <li class="nav-item"><a href="index.html" aria-label="Home">Home</a></li>
                     <li class="nav-item dropdown-parent">
-                        <a href="games.html" aria-label="Games">Games</a>
+                        <a href="games.html" aria-label="Games"><span style="text-decoration: underline;">Games</span></a>
 
                     </li>
                     <li class="nav-item dropdown-parent">
                         <a href="infos.html" aria-label="Infos">Infos</a></li>
                     <li class="nav-item dropdown-parent">
-                        <a href="about_us.html" aria-label="About us"><span style="text-decoration: underline;">About us</span></a>
+                        <a href="about_us.html" aria-label="About us">About us</a>
                         <ul class="dropdown-menu">
                             <li><a href="team.html" aria-label="Team">Team</a></li>
                         </ul>
@@ -44,9 +44,12 @@
                             <li><a href="help.html" aria-label="Contact">Contact</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown-parent">
+                   <li class="nav-item dropdown-parent">
                         <a href="#" id="accessibility-toggle">
-                            <img id="accessibility-icon" src="/slarachare_games/images/accessability_white_icon.png" alt="accesability_bild" width="35">
+
+                            <img id="accessibility-icon" src="./images/accessability_white_icon.png" alt="accesability_bild" width="35">
+
+                            
                         </a>
                     </li>
                  <script>
@@ -54,8 +57,8 @@
         const toggle = document.getElementById('accessibility-toggle');
         const icon = document.getElementById('accessibility-icon');
 
-        const iconWhite = "../slarachare_games/images/accessability_white_icon.png";
-        const iconBlack = "../slarachare_games/images/accesability schwarz.png";
+        const iconWhite = "./images/accessability_white_icon.png";
+        const iconBlack = "./images/accesability schwarz.png";
 
         // Prüfe beim Laden, ob Modus gespeichert ist
         if (localStorage.getItem('bw-accessibility') === 'on') {
